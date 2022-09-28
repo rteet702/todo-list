@@ -1,0 +1,27 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+.App {
+    background-color: gray;
+
+    width: 500px;
+    height: 700px;
+
+    margin: 5rem auto;
+    padding: 1rem;
+}
+
+.todoContainer {
+    margin-top: 1rem;
+
+    display: flex;
+    gap: 3rem;
+}
+
+input[type="submit"] {
+    padding: 0 1rem;
+}
