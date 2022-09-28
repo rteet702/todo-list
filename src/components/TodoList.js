@@ -38,7 +38,7 @@ const TodoList = props => {
     const remove = (e, index) => {
         // same as above, copy state.
         let copyOfState = [...listItems]
-        copyOfState.pop(index)
+        copyOfState.splice(index, 1)
 
         // update state.
         setListItems(copyOfState)
