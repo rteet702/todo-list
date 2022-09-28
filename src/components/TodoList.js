@@ -35,6 +35,15 @@ const TodoList = props => {
         setListItems(copyOfState)
     }
 
+    const remove = (e, index) => {
+        // same as above, copy state.
+        let copyOfState = [...listItems]
+        copyOfState.pop(index)
+
+        // update state.
+        setListItems(copyOfState)
+    }
+
     return (
         <>
           <form onSubmit={ handleForm }>
@@ -50,6 +59,7 @@ const TodoList = props => {
                       <p className='todoItem'>{ item.newItem }</p>
                 }
                 <input className='todoCB' type="checkbox" value={ item.state } onChange={ (e) => checkbox(e, index) }/>
+                <button onClick={ (e) => remove(e, index) }>Remove</button>
               </div>
             )
           }
